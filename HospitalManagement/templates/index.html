@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor and appointment details</title>
+  {% load static %}
+  <link rel="stylesheet" href="{%static 'stylee.css' %}">
+</head>
+<body>
+  
+  <header> 
+    <img src="static/doctor-symbol-b.png" alt="Logo" class="company_logo">
+    <button id="button" onclick="window.open('http://127.0.0.1:8000/admin');" > Login </button>
+  </header >
+  <div id="main">
+    <div id="second">
+      <h1>Doctor and appointment details </h1>
+      </div>
+      <div class="backgroung_image"></div>
+  <div id="details">
+  <h2>Patients Details</h2>
+  <form method= "POST" action="/" style="margin: 40px;">
+    {% csrf_token %}
+    
+    <input type="text" id="name" name="name" required placeholder="Name"><br><br>
+
+    <input type="email" id="name" name="email" required placeholder="Email"><br><br>
+
+    <input type="tel" id="name" name="phone" required placeholder="Phone Number"><br><br>
+
+    <label for="lang">Doctor's Name</label>
+    <select name="DName" id="lang">
+      <option value="Dr Arnav Osborne">Dr Arnav Osborne</option>
+      <option value="Dr Muskan Singh">Dr Muskan Singh</option>
+      <option value="Dr Morgan Hester">Dr Morgan Hester</option>
+      <option value="Dr Suraj Sandal">Dr Suraj Sandal</option>
+      <option value="Dr Sanjit Nayar">Dr Sanjit Nayar</option>
+      <option value="Dr Aahana Kaur">Dr Aahana Kaur</option>
+    </select>
+    <br>
+
+    <label for="Date">Appointment date and time:</label><br>
+    <input type="datetime-local" id="Date" name="Appointment date"><br><br>
+
+    <textarea id="name" name="issue" rows="4" required placeholder="Concerns/Issues"></textarea><br><br>
+
+    <input type="submit"id="submi" value="Submit">
+  </form>
+  </div>
+  </div>
+  <br>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Hospital</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Review</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+ </footer>
+</body>
+</html>
